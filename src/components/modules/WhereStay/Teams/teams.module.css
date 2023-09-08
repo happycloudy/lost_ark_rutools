@@ -1,0 +1,30 @@
+.wrap {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.position {
+    width: 150px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+    font-weight: 500;
+}
+
+.purple {
+    background: #9b59b6;
+}
+
+.green {
+    background: #27ae60;
+}

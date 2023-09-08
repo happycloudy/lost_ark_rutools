@@ -1,4 +1,5 @@
 import {ReactNode} from "react";
+import styles from './section.module.css'
 
 type IProps = {
     children: ReactNode
@@ -7,7 +8,7 @@ type IProps = {
 
 const Section = ({children, id}: IProps) => {
     return (
-        <section id={id}>
+        <section className={styles.section} id={id}>
             {children}
         </section>
     );
