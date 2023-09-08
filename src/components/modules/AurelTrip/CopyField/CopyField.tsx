@@ -9,10 +9,12 @@ type IProps = {
 
 const CopyField = ({positions, picture}: IProps) => {
     const [value, setValue] = useState('')
+    const [showTooltip, setShowTooltip] = useState(false)
 
     const handleClick = () => {
         if (value) {
             navigator.clipboard.writeText(value)
+            setShowTooltip(true)
         }
     }
 
@@ -21,12 +23,27 @@ const CopyField = ({positions, picture}: IProps) => {
             positions.reduce((prev, curr) => prev + curr.title + ' ', ''))
     }, [positions, picture])
 
+    useEffect(() => {
+        if (showTooltip) {
+            setTimeout(() => {
+                setShowTooltip(false)
+            }, 1000)
+        }
+    }, [showTooltip])
+
     return (
         <div className={styles.wrap}>
             Клац на белый квадрат, чтобы скопировать
-            <div onClick={handleClick}>
+            <div className={styles.field} onClick={handleClick}>
                 {value}
             </div>
+            {
+                showTooltip ?
+                    <div className={styles.tooltip}>
+                        Скопировано
+                    </div> :
+                    <></>
+            }
         </div>
     );
 };
