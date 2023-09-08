@@ -14,34 +14,34 @@ export type ITripPicture = {
 
 export const tripPictures: ITripPicture[] = [
     {
-        title: '3Треугольник',
+        title: 'Треугольник(3)',
         src: TriageUrl
     },
     {
-        title: '4Квадрат',
+        title: 'Квадрат(4)',
         src: SquareUrl
     },
     {
-        title: '5Пятиугольник',
+        title: 'Пятиугольник(5)',
         src: FinagleUrl
     },
     {
-        title: '8Восьмиугольник',
+        title: 'Восьмиугольник(8)',
         src: EightAngleUrl
     }, {
-        title: '0Круг',
+        title: 'Круг(0)',
         src: CircleUrl
     },
     {
-        title: 'Два круга',
+        title: 'Два круга(00)',
         src: IntersectionUrl
     },
     {
-        title: 'Часы',
+        title: 'Часы(Watch)',
         src: SandglassUrl
     },
     {
-        title: 'Звезда',
+        title: 'Звезда(Star)',
         src: StarUrl
     },
 ]
