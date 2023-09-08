@@ -1,0 +1,22 @@
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wrap > div {
+    font-size: 25px;
+    font-weight: 500;
+    padding: 5px 10px;
+    width: 80%;
+    background: #fff;
+    color: #000;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
