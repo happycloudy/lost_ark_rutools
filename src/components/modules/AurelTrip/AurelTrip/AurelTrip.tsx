@@ -5,6 +5,7 @@ import {IGridItem, initialTripGrid} from "../constants/initialTripGrid.ts";
 import Grid from "../Grid/Grid.tsx";
 import Title from "../../../Title/Title.tsx";
 import SelectPicture from "../SelectPicture/SelectPicture.tsx";
+import GridButtons from "../GridButtons/GridButtons.tsx";
 
 
 const AurelTrip = () => {
@@ -18,6 +19,27 @@ const AurelTrip = () => {
             return column
         }))
     )
+
+    const filterGrid = (item: IGridItem) => setGrid(prev =>
+        prev.map(row => row.map(column => {
+            if (column.title === item.title) {
+                column.state = false
+            }
+            return column
+        }))
+    )
+
+    const undo = () => setPositions(prev => {
+        const positions = [...prev]
+        const removedItem = positions.pop()
+        if (removedItem) filterGrid(removedItem)
+        return positions
+    })
+
+    const reset = () => setPositions(() => {
+        clearGrid()
+        return []
+    })
 
     const updateGrid = (row: number, column: number) => setGrid(prev => {
         const grid = [...prev]
@@ -38,15 +60,14 @@ const AurelTrip = () => {
         }
     })
 
-    const handlePicture = (picture: string) => {
-        setPicture(picture)
-    }
+    const handlePicture = (picture: string) => setPicture(picture)
 
     return (
         <Section id={'trip'}>
             <Title title={'Трип Аврельсуд (6 фаза)'}></Title>
             <CopyField picture={picture} positions={positions}/>
             <SelectPicture picture={picture} handlePicture={handlePicture}/>
+            <GridButtons undo={undo} reset={reset}/>
             <Grid grid={grid} updatePositions={updatePositions}/>
         </Section>
     );
