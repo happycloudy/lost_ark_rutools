@@ -1,5 +1,5 @@
 import styles from './grid.module.css'
-import {IGridItem} from "../constants/initialTripGrid.ts";
+import {IGridItem} from "../../constants/initialTripGrid.ts";
 
 type IProps = {
     grid: IGridItem[][]

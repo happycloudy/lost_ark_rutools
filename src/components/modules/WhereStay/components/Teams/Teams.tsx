@@ -1,5 +1,5 @@
 import styles from './teams.module.css'
-import {teams} from "../constants/teams.ts";
+import {teams} from "../../constants/teams.ts";
 
 type IProps = {
     selected: {

@@ -1,5 +1,5 @@
 import styles from './select-picture.module.css'
-import {tripPictures} from "../constants/tripPictures.ts";
+import {tripPictures} from "../../constants/tripPictures.ts";
 
 type IProps = {
     picture: string

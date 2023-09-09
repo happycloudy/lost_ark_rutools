@@ -1,9 +1,9 @@
-import Section from "../../../Section/Section.tsx";
+import Section from "../../../../Section/Section.tsx";
 import CopyField from "../CopyField/CopyField.tsx";
 import {useState} from "react";
-import {IGridItem, initialTripGrid} from "../constants/initialTripGrid.ts";
+import {IGridItem, initialTripGrid} from "../../constants/initialTripGrid.ts";
 import Grid from "../Grid/Grid.tsx";
-import Title from "../../../Title/Title.tsx";
+import Title from "../../../../Title/Title.tsx";
 import SelectPicture from "../SelectPicture/SelectPicture.tsx";
 import GridButtons from "../GridButtons/GridButtons.tsx";
 

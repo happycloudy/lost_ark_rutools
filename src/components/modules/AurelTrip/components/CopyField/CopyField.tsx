@@ -1,4 +1,4 @@
-import {IGridItem} from "../constants/initialTripGrid.ts";
+import {IGridItem} from "../../constants/initialTripGrid.ts";
 import styles from './copy-field.module.css'
 import {useEffect, useState} from "react";
 

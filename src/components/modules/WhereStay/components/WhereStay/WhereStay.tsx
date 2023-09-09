@@ -1,5 +1,5 @@
-import Section from "../../../Section/Section.tsx";
-import Title from "../../../Title/Title.tsx";
+import Section from "../../../../Section/Section.tsx";
+import Title from "../../../../Title/Title.tsx";
 import Teams from "../Teams/Teams.tsx";
 import {useState} from "react";
 import WhereStayResult from "../WhereStayResult/WhereStayResult.tsx";
