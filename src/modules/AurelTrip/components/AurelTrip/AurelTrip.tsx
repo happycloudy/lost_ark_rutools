@@ -1,6 +1,6 @@
 import Section from "../../../../components/Section/Section.tsx";
 import CopyField from "../CopyField/CopyField.tsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {IGridItem, initialTripGrid} from "../../constants/initialTripGrid.ts";
 import Grid from "../Grid/Grid.tsx";
 import Title from "../../../../components/Title/Title.tsx";
@@ -61,6 +61,10 @@ const AurelTrip = () => {
     })
 
     const handlePicture = (picture: string) => setPicture(picture)
+
+    useEffect(() => {
+        reset()
+    }, [])
 
     return (
         <Section id={'trip'}>
