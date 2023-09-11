@@ -1,12 +1,28 @@
 import styles from './navigation.module.css'
+import {ITab} from "../../constants/ITab.ts";
+import {tabs} from "../../constants/tabs.tsx";
+import React from "react";
 
-const Navigation = () => {
+type IProps = {
+    updateTab: (tab: ITab) => void
+}
+
+const Navigation = ({updateTab}: IProps) => {
+    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, tab: ITab) => {
+        e.preventDefault()
+        updateTab(tab)
+    }
+
     return (
         <nav className={styles.nav}>
             <h2>Инструменты</h2>
-            <a href={'#trip'}>Трип Аврельсуд (6 фаза)</a>
-            <a href={'#place_by_time'}>Куда мне встать?(WIP)</a>
-            <a href={'#place_by_time'}>Калькулятор грав(WIP)</a>
+            {
+                tabs.map(tab => (
+                    <a key={tab.name} onClick={(e) => handleClick(e, tab)}>
+                        {tab.name}
+                    </a>
+                ))
+            }
         </nav>
     );
 };

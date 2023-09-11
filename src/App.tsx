@@ -1,14 +1,15 @@
 import Navigation from "./components/Navigation/Navigation.tsx";
-import AurelTrip from "./modules/AurelTrip/components/AurelTrip/AurelTrip.tsx";
-import WhereStay from "./modules/WhereStay/components/WhereStay/WhereStay.tsx";
+import {useState} from "react";
+import {tabs} from "./constants/tabs.tsx";
+import {ITab} from "./constants/ITab.ts";
 
 function App() {
+    const [tab, setTab] = useState<ITab>(tabs[0])
 
     return (
         <main>
-            <Navigation/>
-            <AurelTrip/>
-            <WhereStay/>
+            <Navigation updateTab={setTab}/>
+            {tab.component}
         </main>
     )
 }
