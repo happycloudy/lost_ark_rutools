@@ -1,27 +1,22 @@
-# React + TypeScript + Vite
+## О проекте
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Привет! Тут лежат исходники приложения, в котором
+я делаю разные инструменты для ЛА и в планах объединить все существующие приложения в одно - бинго, калькутор фетранитов
+и тд
 
-Currently, two official plugins are available:
+В первую очередь это приложение создано для себя и друзей, но решил поделится со всеми
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Если есть предложения или хочется поучаствовать пиши в дс `Happy#1718`
 
-## Expanding the ESLint configuration
+## В планах
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Онлайн акцион
+- Калькулятор гравировок, где за тебя сразу подберется бижа
+- Где встать на любом боссе
 
-- Configure the top-level `parserOptions` property like this:
+### Проблемы
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+VkPlay не очень хотят делится API аукциона, хотя у EU и KR они есть
+и прекрасно работают. Понятно, что это будет новый простор для ботов, но остальных это почему-то не останавливает.
+`Поэтому единственное решение "Как собирать инфу с аука" это OCR - определение текста по картинке.`
+Может быть сделаю программу для этого дела, но пока влом, хотя уже видел подобные решения
