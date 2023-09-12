@@ -15,7 +15,7 @@ const Navigation = ({updateTab}: IProps) => {
 
     return (
         <header className={styles.header}>
-            <h2 className={styles.title}>Инструменты</h2>
+            <h2 className={styles.title}>Инструменты <br/> Lost Ark</h2>
             <nav className={styles.nav}>
                 {
                     tabs.map(tab => (
