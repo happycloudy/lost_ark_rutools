@@ -4,9 +4,12 @@
     align-items: center;
 }
 
-.link {
+.normal {
     color: inherit;
     text-decoration: none;
     font-size: 18px;
+}
+
+.bold {
     font-weight: 800;
 }
