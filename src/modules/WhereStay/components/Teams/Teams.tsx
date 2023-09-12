@@ -15,6 +15,9 @@ const Teams = ({selected, updatePosition}: IProps) => {
             {
                 teams.map((group, groupIndex) => (
                     <div className={`${styles.team}`} key={groupIndex}>
+                        <span>
+                            Команда {groupIndex + 1}
+                        </span>
                         {
                             group.map(position => (
                                 <div onClick={() => updatePosition(position, groupIndex)}

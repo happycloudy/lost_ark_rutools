@@ -1,11 +1,17 @@
+import styles from './guide.module.css'
+import {ReactNode} from "react";
+
 type IProps = {
-    text: string
+    children: ReactNode
 }
 
-const Guide = ({text}: IProps) => {
+const Guide = ({children}: IProps) => {
     return (
-        <div>
-            {text}
+        <div className={styles.wrap}>
+            <h3>Как этим пользоваться?</h3>
+            <div>
+                {children}
+            </div>
         </div>
     );
 };

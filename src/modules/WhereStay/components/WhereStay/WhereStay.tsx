@@ -3,6 +3,7 @@ import Title from "../../../../components/Title/Title.tsx";
 import Teams from "../Teams/Teams.tsx";
 import {useState} from "react";
 import WhereStayResult from "../WhereStayResult/WhereStayResult.tsx";
+import WhereStayGuide from "../WhereStayGuide/WhereStayGuide.tsx";
 
 const WhereStay = () => {
     const [position, setPosition] = useState({
@@ -15,6 +16,7 @@ const WhereStay = () => {
     return (
         <Section id={'place_by_time'}>
             <Title title={'Куда мне встать?'}/>
+            <WhereStayGuide/>
             <WhereStayResult position={position}/>
             <Teams selected={position} updatePosition={updatePosition}/>
         </Section>

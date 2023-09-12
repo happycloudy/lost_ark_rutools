@@ -6,6 +6,7 @@ import Grid from "../Grid/Grid.tsx";
 import Title from "../../../../components/Title/Title.tsx";
 import SelectPicture from "../SelectPicture/SelectPicture.tsx";
 import GridButtons from "../GridButtons/GridButtons.tsx";
+import AurelTripGuide from "../AurelTripGuide/AurelTripGuide.tsx";
 
 
 const AurelTrip = () => {
@@ -69,6 +70,7 @@ const AurelTrip = () => {
     return (
         <Section id={'trip'}>
             <Title title={'Трип Аврельсуд (6 фаза)'}></Title>
+            <AurelTripGuide/>
             <CopyField picture={picture} positions={positions}/>
             <SelectPicture picture={picture} handlePicture={handlePicture}/>
             <GridButtons undo={undo} reset={reset}/>

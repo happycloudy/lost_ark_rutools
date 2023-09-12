@@ -33,7 +33,6 @@ const CopyField = ({positions, picture}: IProps) => {
 
     return (
         <div className={styles.wrap}>
-            Клац на белый квадрат, чтобы скопировать
             <div className={styles.field} onClick={handleClick}>
                 {value}
             </div>

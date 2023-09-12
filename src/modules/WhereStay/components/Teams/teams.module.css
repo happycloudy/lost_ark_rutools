@@ -10,6 +10,10 @@
     gap: 10px;
 }
 
+.team > span {
+    text-align: center;
+}
+
 .position {
     width: 150px;
     height: 30px;
