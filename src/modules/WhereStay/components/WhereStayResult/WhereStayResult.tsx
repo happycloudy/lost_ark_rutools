@@ -1,5 +1,6 @@
 import styles from './where-stay-result.module.css'
 import {useEffect, useState} from "react";
+import Pizza from "../Pizza/Pizza.tsx";
 
 type IPosition = {
     number: number
@@ -10,20 +11,18 @@ type IProps = {
     position: IPosition
 }
 
-const calculatePosition = (position: IPosition): string => {
-    const prefix = 'Вставай на '
+const calculatePosition = (position: IPosition): number => {
     if (position.group) {
         let watch = 3 * position.number + 1
         if (watch > 12) watch -= 12
-        return prefix + watch
+        return watch
     } else {
-        const watch = 3 * position.number
-        return prefix + watch
+        return 3 * position.number
     }
 }
 
 const WhereStayResult = ({position}: IProps) => {
-    const [result, setResult] = useState('')
+    const [result, setResult] = useState<number>()
 
     useEffect(() => {
         const result = calculatePosition(position)
@@ -31,8 +30,9 @@ const WhereStayResult = ({position}: IProps) => {
     }, [position])
 
     return (
-        <div className={styles.text}>
-            {result}
+        <div className={styles.wrap}>
+            Вставай на <b className={styles.result}>{result}</b>
+            <Pizza active={result}/>
         </div>
     );
 };

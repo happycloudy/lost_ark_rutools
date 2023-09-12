@@ -1,4 +1,9 @@
-.text {
-    font-weight: 500;
+.wrap {
     font-size: 20px;
+    text-align: center;
+}
+
+.result {
+    font-weight: 700;
+    color: #2ecc71;
 }
