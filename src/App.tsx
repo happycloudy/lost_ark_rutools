@@ -9,7 +9,7 @@ function App() {
 
     return (
         <main>
-            <div>
+            <div className={'main-wrap'}>
                 <Navigation updateTab={setTab}/>
                 {tab.component}
             </div>

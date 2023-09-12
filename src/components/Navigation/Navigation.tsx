@@ -14,16 +14,20 @@ const Navigation = ({updateTab}: IProps) => {
     }
 
     return (
-        <nav className={styles.nav}>
-            <h2>Инструменты</h2>
-            {
-                tabs.map(tab => (
-                    <a key={tab.name} onClick={(e) => handleClick(e, tab)}>
-                        {tab.name}
-                    </a>
-                ))
-            }
-        </nav>
+        <header className={styles.header}>
+            <h2 className={styles.title}>Инструменты</h2>
+            <nav className={styles.nav}>
+                {
+                    tabs.map(tab => (
+                        <a key={tab.name}
+                           className={styles.link}
+                           onClick={(e) => handleClick(e, tab)}>
+                            {tab.name}
+                        </a>
+                    ))
+                }
+            </nav>
+        </header>
     );
 };
 
